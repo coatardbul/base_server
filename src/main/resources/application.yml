@@ -2,11 +2,11 @@ server:
   port: 9007
   servlet:
     #  全局路径配置
-    context-path: /base_server
+    context-path: /baseServer
 
 spring:
   application:
-    name: base_server
+    name: baseServer
 
 
 
@@ -21,8 +21,8 @@ logging:
 eureka:
   instance:
     prefer-ip-address: true
-    hostname: base_server
-    appname: base_server
+    hostname: baseServer
+    appname: baseServer
   client:
     serviceUrl:
       defaultZone: http://47.105.148.90:8001/eureka/
