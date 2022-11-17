@@ -1,0 +1,132 @@
+2022-11-12 10:06:41.582  INFO 20189 --- [main] c.c.base_server.BaseServerApplication    : The following profiles are active: tx
+2022-11-12 10:06:42.539  INFO 20189 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4503b584-0da2-3c79-8a87-fba6234cb999
+2022-11-12 10:06:42.642  INFO 20189 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 10:06:43.080  INFO 20189 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9007 (http)
+2022-11-12 10:06:43.109  INFO 20189 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-12 10:06:43.109  INFO 20189 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2022-11-12 10:06:43.262  INFO 20189 --- [main] o.a.c.c.C.[.[localhost].[/baseServer]    : Initializing Spring embedded WebApplicationContext
+2022-11-12 10:06:43.263 DEBUG 20189 --- [main] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2022-11-12 10:06:43.263  INFO 20189 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1662 ms
+2022-11-12 10:06:43.659  INFO 20189 --- [main] c.c.b.common.util.IdGeneratorSnowflake   : 当前机器的workerId：2130706433
+2022-11-12 10:06:43.684  WARN 20189 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-11-12 10:06:43.685  INFO 20189 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-11-12 10:06:43.691  WARN 20189 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-11-12 10:06:43.691  INFO 20189 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-11-12 10:06:43.764 DEBUG 20189 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2022-11-12 10:06:43.923  INFO 20189 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-11-12 10:06:43.943 DEBUG 20189 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-11-12 10:06:44.012 DEBUG 20189 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2022-11-12 10:06:44.024 DEBUG 20189 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-11-12 10:06:44.035 DEBUG 20189 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-11-12 10:06:44.338  WARN 20189 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'eurekaInstanceConfigBean' defined in class path resource [org/springframework/cloud/netflix/eureka/EurekaClientAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.cloud.netflix.eureka.EurekaInstanceConfigBean]: Factory method 'eurekaInstanceConfigBean' threw exception; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.cloud.client.ipAddress' in value "${spring.cloud.client.ipAddress}"
+2022-11-12 10:06:44.340  INFO 20189 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-11-12 10:06:44.344  INFO 20189 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-11-12 10:06:44.364  INFO 20189 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-11-12 10:06:44.379 ERROR 20189 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'eurekaInstanceConfigBean' defined in class path resource [org/springframework/cloud/netflix/eureka/EurekaClientAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.cloud.netflix.eureka.EurekaInstanceConfigBean]: Factory method 'eurekaInstanceConfigBean' threw exception; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.cloud.client.ipAddress' in value "${spring.cloud.client.ipAddress}"
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:627) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:607) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:849) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877) ~[spring-context-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.__refresh(AbstractApplicationContext.java:549) ~[spring-context-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.jrLockAndRefresh(AbstractApplicationContext.java:41002) ~[spring-context-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:42008) ~[spring-context-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140) ~[spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202) [spring-boot-2.1.6.RELEASE.jar:2.1.6.RELEASE]
+	at com.coatardbul.base_server.BaseServerApplication.main(BaseServerApplication.java:10) [classes/:na]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.cloud.netflix.eureka.EurekaInstanceConfigBean]: Factory method 'eurekaInstanceConfigBean' threw exception; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.cloud.client.ipAddress' in value "${spring.cloud.client.ipAddress}"
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	... 21 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'spring.cloud.client.ipAddress' in value "${spring.cloud.client.ipAddress}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:178) ~[spring-core-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:124) ~[spring-core-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:237) ~[spring-core-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:211) ~[spring-core-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveNestedPlaceholders(AbstractPropertyResolver.java:228) ~[spring-core-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.core.env.PropertySourcesPropertyResolver.getProperty(PropertySourcesPropertyResolver.java:88) ~[spring-core-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.core.env.PropertySourcesPropertyResolver.getProperty(PropertySourcesPropertyResolver.java:62) ~[spring-core-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.core.env.AbstractEnvironment.getProperty(AbstractEnvironment.java:539) ~[spring-core-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration.getProperty(EurekaClientAutoConfiguration.java:132) ~[spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration.eurekaInstanceConfigBean(EurekaClientAutoConfiguration.java:139) ~[spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$$EnhancerBySpringCGLIB$$1.CGLIB$eurekaInstanceConfigBean$5(<generated>) ~[spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$$EnhancerBySpringCGLIB$$1$$FastClassBySpringCGLIB$$1.invoke(<generated>) ~[spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.1.8.RELEASE.jar:5.1.8.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363) ~[spring-context-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	at org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration$$EnhancerBySpringCGLIB$$1.eurekaInstanceConfigBean(<generated>) ~[spring-cloud-netflix-eureka-client-2.1.1.RELEASE.jar:2.1.1.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_201]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_201]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_201]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_201]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.1.6.RELEASE.jar:5.1.6.RELEASE]
+	... 22 common frames omitted
+
+2022-11-12 10:07:42.766  INFO 20381 --- [main] c.c.base_server.BaseServerApplication    : The following profiles are active: tx
+2022-11-12 10:07:43.426  INFO 20381 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4503b584-0da2-3c79-8a87-fba6234cb999
+2022-11-12 10:07:43.506  INFO 20381 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-12 10:07:43.871  INFO 20381 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9007 (http)
+2022-11-12 10:07:43.917  INFO 20381 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-11-12 10:07:43.918  INFO 20381 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2022-11-12 10:07:44.308  INFO 20381 --- [main] o.a.c.c.C.[.[localhost].[/baseServer]    : Initializing Spring embedded WebApplicationContext
+2022-11-12 10:07:44.308 DEBUG 20381 --- [main] o.s.web.context.ContextLoader            : Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+2022-11-12 10:07:44.308  INFO 20381 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1522 ms
+2022-11-12 10:07:44.387  INFO 20381 --- [main] c.c.b.common.util.IdGeneratorSnowflake   : 当前机器的workerId：2130706433
+2022-11-12 10:07:44.408  WARN 20381 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-11-12 10:07:44.408  INFO 20381 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-11-12 10:07:44.412  WARN 20381 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2022-11-12 10:07:44.413  INFO 20381 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-11-12 10:07:44.473 DEBUG 20381 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/**/favicon.ico] in 'faviconHandlerMapping'
+2022-11-12 10:07:44.609  INFO 20381 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-11-12 10:07:44.623 DEBUG 20381 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2022-11-12 10:07:44.679 DEBUG 20381 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 3 mappings in 'requestMappingHandlerMapping'
+2022-11-12 10:07:44.691 DEBUG 20381 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2022-11-12 10:07:44.701 DEBUG 20381 --- [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2022-11-12 10:07:45.166  INFO 20381 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-11-12 10:07:45.237  INFO 20381 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-11-12 10:07:45.345  INFO 20381 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2022-11-12 10:07:45.345  INFO 20381 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2022-11-12 10:07:45.547  INFO 20381 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2022-11-12 10:07:45.547  INFO 20381 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2022-11-12 10:07:45.808  INFO 20381 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-11-12 10:07:45.838  INFO 20381 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-11-12 10:07:45.838  INFO 20381 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-11-12 10:07:45.838  INFO 20381 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-11-12 10:07:45.838  INFO 20381 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-11-12 10:07:45.838  INFO 20381 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-11-12 10:07:45.838  INFO 20381 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-11-12 10:07:45.838  INFO 20381 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-11-12 10:07:46.287  INFO 20381 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-11-12 10:07:46.290  INFO 20381 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-11-12 10:07:46.293  INFO 20381 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-11-12 10:07:46.298  INFO 20381 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1668218866296 with initial instances count: 8
+2022-11-12 10:07:46.299  INFO 20381 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application BASESERVER with eureka with status UP
+2022-11-12 10:07:46.300  INFO 20381 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1668218866300, current=UP, previous=STARTING]
+2022-11-12 10:07:46.302  INFO 20381 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BASESERVER/192.168.8.104:baseServer:9007: registering service...
+2022-11-12 10:07:46.413  INFO 20381 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9007 (http) with context path '/baseServer'
+2022-11-12 10:07:46.414  INFO 20381 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9007
+2022-11-12 10:07:46.417  INFO 20381 --- [main] c.c.base_server.BaseServerApplication    : Started BaseServerApplication in 5.117 seconds (JVM running for 16.999)
+2022-11-12 10:07:46.485  INFO 20381 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BASESERVER/192.168.8.104:baseServer:9007 - registration status: 204
+2022-11-12 10:08:36.292  INFO 20381 --- [Thread-29] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application BASESERVER with eureka with status DOWN
+2022-11-12 10:08:36.293  WARN 20381 --- [Thread-29] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1668218916293, current=DOWN, previous=UP]
+2022-11-12 10:08:36.293  INFO 20381 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BASESERVER/192.168.8.104:baseServer:9007: registering service...
+2022-11-12 10:08:36.298  INFO 20381 --- [Thread-29] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-11-12 10:08:36.300  INFO 20381 --- [Thread-29] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-11-12 10:08:36.379  INFO 20381 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BASESERVER/192.168.8.104:baseServer:9007 - registration status: 204
+2022-11-12 10:08:36.382  INFO 20381 --- [Thread-29] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-11-12 10:08:36.454  INFO 20381 --- [Thread-29] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_BASESERVER/192.168.8.104:baseServer:9007 - deregister  status: 200
+2022-11-12 10:08:36.467  INFO 20381 --- [Thread-29] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
