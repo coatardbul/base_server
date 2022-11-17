@@ -7,7 +7,8 @@ server:
 spring:
   application:
     name: baseServer
-
+  profiles:
+    active: tx
 
 
 logging:
@@ -23,6 +24,4 @@ eureka:
     prefer-ip-address: true
     hostname: baseServer
     appname: baseServer
-  client:
-    serviceUrl:
-      defaultZone: http://47.105.148.90:8001/eureka/
+    ip-address: 124.222.217.230
