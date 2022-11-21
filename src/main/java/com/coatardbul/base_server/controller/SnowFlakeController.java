@@ -1,6 +1,6 @@
 package com.coatardbul.base_server.controller;
 
-import com.coatardbul.base_server.service.SnowFlakeService;
+import com.coatardbul.base.service.SnowFlakeService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,7 +18,7 @@ public class SnowFlakeController {
     private SnowFlakeService snowFlakeService;
 
     @GetMapping("/snowflakeId")
-    public String getSnowflakeId(){
-        return snowFlakeService.getIdBySnowFlake();
+    public long getSnowflakeId(){
+        return snowFlakeService.snowflakeId();
     }
 }

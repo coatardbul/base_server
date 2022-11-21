@@ -9,7 +9,16 @@ spring:
     name: baseServer
   profiles:
     active: tx
-
+  redis:
+    host: 43.142.151.181
+    port: 6399
+    database: 0
+    password:
+    max-idle: 8
+    max-active: 8
+    max-wait: -1
+    min-idle: 0
+    timeout: 5000
 
 logging:
   path: logs/
